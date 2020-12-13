@@ -14,7 +14,7 @@ public class Hands implements Comparable {
     private Set<Card> cardSet;
     private String type;
 
-    private int rank(String s) {
+    public static int rank(String s) {
         switch (s) {
             case SF:
                 return 0;
@@ -33,10 +33,18 @@ public class Hands implements Comparable {
             case OP:
                 return 7;
             case NP:
-                return 9;
+                return 8;
             default:
                 throw new IllegalArgumentException("Cannot rank " + s);
         }
+    }
+
+    public static String name(int rank) {
+        return getNames()[rank];
+    }
+
+    public static String[] getNames() {
+        return new String[]{SF, FK, FH, FL, ST, TK, TP, OP, NP};
     }
 
     /**

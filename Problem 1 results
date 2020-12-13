@@ -1,0 +1,44 @@
+1000 trials with seed 2
+Straight Flush: 0.0%
+Four of a Kind: 0.0%
+Full House (3+2): 0.1%
+Flush: 0.1%
+Straight: 0.6%
+Three of a Kind: 1.4000000000000001%
+Two Pairs: 3.2%
+One Pair: 41.8%
+No Pair: 52.800000000000004%
+
+100000 trials with seed 2
+Straight Flush: 0.002%
+Four of a Kind: 0.006999999999999999%
+Full House (3+2): 0.116%
+Flush: 0.181%
+Straight: 0.378%
+Three of a Kind: 1.729%
+Two Pairs: 4.35%
+One Pair: 41.073%
+No Pair: 52.164%
+
+500000 trials with seed 342534
+Straight Flush: 0.005%
+Four of a Kind: 0.018000000000000002%
+Full House (3+2): 0.10540000000000001%
+Flush: 0.18860000000000002%
+Straight: 0.4138%
+Three of a Kind: 1.6993999999999998%
+Two Pairs: 4.3046%
+One Pair: 40.9482%
+No Pair: 52.317%
+
+1000000 trials with seed 842534
+Straight Flush: 0.0058%
+Four of a Kind: 0.015300000000000001%
+Full House (3+2): 0.1095%
+Flush: 0.1766%
+Straight: 0.42519999999999997%
+Three of a Kind: 1.7319999999999998%
+Two Pairs: 4.3481%
+One Pair: 40.967%
+No Pair: 52.2205%
+
