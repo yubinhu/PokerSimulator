@@ -42,3 +42,25 @@ Two Pairs: 4.3481%
 One Pair: 40.967%
 No Pair: 52.2205%
 
+10000000 trials with seed 85342534
+Straight Flush: 0.00466%
+Four of a Kind: 0.015139999999999999%
+Full House (3+2): 0.11264999999999999%
+Flush: 0.17826999999999998%
+Straight: 0.41694999999999993%
+Three of a Kind: 1.73471%
+Two Pairs: 4.30971%
+One Pair: 40.96058%
+No Pair: 52.26733%
+
+10000000 trials with seed 95342534
+Straight Flush: 0.00419%
+Four of a Kind: 0.014660000000000001%
+Full House (3+2): 0.11203999999999999%
+Flush: 0.17812%
+Straight: 0.41805000000000003%
+Three of a Kind: 1.73298%
+Two Pairs: 4.30141%
+One Pair: 40.980109999999996%
+No Pair: 52.25843999999999%
+

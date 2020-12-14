@@ -62,7 +62,7 @@ public class RandomSimulation {
     }
 
     public static void main(String[] args) {
-        long seed = 85342534;
+        long seed = 95342534;
         int n = 10000000;
         printStat(stat(seed, n), seed, n);
     }
