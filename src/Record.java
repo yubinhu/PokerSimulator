@@ -12,6 +12,15 @@ public class Record {
     private String filename;
     private File file;
     private boolean print = true;
+    private boolean save = true;
+
+    /**
+     * This function is basically printing.
+     */
+    public Record() {
+        print = true;
+        save = false;
+    }
 
     public Record(String name) {
         filename = name;
@@ -19,8 +28,7 @@ public class Record {
     }
 
     public Record(String name, String[] content) {
-        filename = name;
-        file = new File(filename);
+        this(name);
         this.overwriteLines(content);
     }
 
@@ -30,13 +38,16 @@ public class Record {
 
     //---------Layer 0-----------
     private void write(String content, boolean append) {
+
         try {
-            FileWriter myWriter = new FileWriter(file, append);
             if (print) {
                 System.out.print(content);
             }
-            myWriter.write(content);
-            myWriter.close();
+            if (save) {
+                FileWriter myWriter = new FileWriter(file, append);
+                myWriter.write(content);
+                myWriter.close();
+            }
         } catch (IOException e) {
             System.out.println("An error occurred in writing to file " + filename);
             e.printStackTrace();
@@ -64,8 +75,8 @@ public class Record {
         append(nl);
     }
 
-    public void appendln(String content) {
-        append(content + nl);
+    public void appendln(Object content) {
+        append(content.toString() + nl);
     }
 
     //---------Layer 3-----------

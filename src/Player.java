@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Player {
     private Card[] hand;
 
@@ -11,7 +15,17 @@ public class Player {
         } else if (cards.length < 2) {
             throw new IllegalArgumentException("Too few cards dealt");
         }
-        this.hand[0] = cards[0];
-        this.hand[1] = cards[1];
+        for (int i = 0; i < 2; i += 1) {
+            this.hand[i] = cards[i];
+        }
+    }
+
+    public void collect(Set<Card> cards) {
+        Card[] array = new Card[cards.size()];
+        collect(cards.toArray(array));
+    }
+
+    public Set<Card> getHand() {
+        return new HashSet<>(Arrays.asList(hand));
     }
 }

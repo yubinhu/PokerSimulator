@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Game {
@@ -6,6 +8,7 @@ public class Game {
     private Random rand;
     private long seed;
     private Player[] players;
+    private List<Card> community;
 
     /**
      * Default game.
@@ -15,6 +18,7 @@ public class Game {
     }
 
     public Game(int playerNum, long seed) {
+        community = new ArrayList<>();
         deck = new Deck();
         this.playerNum = playerNum;
         this.seed = seed;
@@ -27,12 +31,30 @@ public class Game {
 
     public void deal() {
         for (int i = 0; i < playerNum; i += 1) {
-            players[i].collect((Card[]) deck.randomDraw(rand, 2).toArray());
+            players[i].collect(deck.randomDraw(rand, 2));
         }
     }
 
+    public void printGame() {
+        Record printer = new Record(); //Just print, no record
+        printer.appendln("Community cards: ");
+        printer.appendln(community);
+        for (int i = 0; i < playerNum; i += 1) {
+            printer.appendln("Player " + i);
+            printer.appendln(players[i].getHand());
+        }
+    }
+
+
+    public void drawGame() {
+        //TODO: implement a graphic interface
+        return;
+    }
+
     public static void main(String[] args) {
-        
+        Game test = new Game();
+        test.deal();
+        test.printGame();
     }
 
 }
