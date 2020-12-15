@@ -68,27 +68,6 @@ public class Hands implements Comparable {
         return compareBases;
     }
 
-    /**
-     * Helper function for compareToFive.
-     * Return a positive int if this is better than other.
-     * Both should have the same rank and the same size 5!!!
-     */
-    private int tieBreak(Hands other) {
-        List<Integer> cb1 = this.compareBases;
-        List<Integer> cb2 = other.getCompareBases();
-        if (cb1.size() != cb2.size()) {
-            throw new IllegalArgumentException("Error: Not a tie");
-        }
-        for (int i = 0; i < cb1.size(); i += 1) {
-            if (cb1.get(i) == cb2.get(i)) {
-                continue;
-            } else {
-                return cb1.get(i) - cb2.get(i);
-            }
-        }
-        return 0;
-    }
-
     public int size() {
         return cardSet.size();
     }
@@ -308,6 +287,27 @@ public class Hands implements Comparable {
             compareBases = bestHand.getCompareBases();
             return type;
         }
+    }
+
+    /**
+     * Helper function for compareToFive.
+     * Return a positive int if this is better than other.
+     * Both should have the same rank and the same size 5!!!
+     */
+    private int tieBreak(Hands other) {
+        List<Integer> cb1 = this.compareBases;
+        List<Integer> cb2 = other.getCompareBases();
+        if (cb1.size() != cb2.size()) {
+            throw new IllegalArgumentException("Error: Not a tie");
+        }
+        for (int i = 0; i < cb1.size(); i += 1) {
+            if (cb1.get(i) == cb2.get(i)) {
+                continue;
+            } else {
+                return cb1.get(i) - cb2.get(i);
+            }
+        }
+        return 0;
     }
 
     /**
